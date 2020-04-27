@@ -1,0 +1,32 @@
+.container {
+    margin-top: 5px;
+}
+
+.summary {        
+    border: 3px solid black;
+}
+
+.summary div {
+    background-color: #efefef;
+    border: 1px dotted silver;
+    border-collapse: collapse;
+}
+
+.col-h {
+    background-color: rgb(225, 233, 236);
+    border-radius: 25px;
+    margin: 4px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border: 1px solid gray;
+    box-shadow: 3px 3px silver;
+}
+
+.col-h span {
+    padding-left: 3px;
+}
+
+.col-h label {
+    font-weight: bolder;
+}

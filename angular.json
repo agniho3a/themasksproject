@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TheMASKSProject"
+    }
+  },
+  "defaultProject": "TheMASKSProject",
+  "cli": {
+    "analytics": false
+  }
 }

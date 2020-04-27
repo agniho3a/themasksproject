@@ -1,0 +1,86 @@
+<div class="container py-5 details">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <h4>Order Details</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <form>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label for="o_sno">S.No.</label>
+                        <input type="text" class="form-control" placeholder="--" value="{{ orders[currentIdx].serialNo }}" disabled>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputFirstname">Name</label>
+                      <textarea class="form-control" id="inputFirstname" placeholder="Name" rows="2" disabled>{{ orders[currentIdx].name }}</textarea>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="inputLastname">Status</label>
+                        <input type="text" class="form-control" id="o_dyn_status" placeholder="--" value="{{ getStatusString() }}" disabled [ngClass]="currentClass">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="inputAddressLine1">Qty</label>
+                        <input type="text" class="form-control" id="o_qty" placeholder="--" value="{{ orders[currentIdx].quantity }}" disabled>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputAddressLine2">Amount</label>
+                        <input type="text" class="form-control" id="o_amt" placeholder="--" value="{{ orders[currentIdx].amount }}" disabled>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputAddressLine2">Donation</label>
+                        <input type="text" class="form-control" id="o_dntn" placeholder="--" value="{{ orders[currentIdx].donation }}" disabled>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputAddressLine2">TOTAL</label>
+                        <input type="text" class="form-control" id="o_total" placeholder="--" value="{{ orders[currentIdx].total }}" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="inputAddressLine2">Paid?</label>
+                        <input type="text" class="form-control" id="o_paid" placeholder="--" value="{{ orders[currentIdx].paid }}" disabled>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputAddressLine2">Payment Mode</label>
+                        <input type="text" class="form-control" id="o_paymnt_mode" placeholder="--" value="{{ orders[currentIdx].paymentMode }}" disabled>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputAddressLine2">Ship / Pickup</label>
+                        <input type="text" class="form-control" id="o_ship_pickup" placeholder="--" value="{{ orders[currentIdx].shipOrPickup }}" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="inputAddressLine2">Ready?</label>
+                        <input type="text" class="form-control" id="o_ready" placeholder="--" value="{{ orders[currentIdx].readyToShipOrPickup }}" disabled>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputAddressLine2">Shipped/Picked?</label>
+                        <input type="text" class="form-control" id="o_ready" placeholder="--" value="{{ orders[currentIdx].shippedOrPickedUp }}" disabled>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputAddressLine2">All Done</label>
+                        <input type="text" class="form-control" id="o_ready" placeholder="--" value="{{ orders[currentIdx].allDone }}" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputAddressLine2">Shipping Address</label>
+                        <textarea class="form-control" rows="5" disabled>{{ orders[currentIdx].shipToAddress }}</textarea>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputAddressLine2">Comments / Notes</label>
+                        <textarea class="form-control" rows="5" disabled>{{ orders[currentIdx].comments }}</textarea>
+                    </div>
+
+                </div>
+                <button type="button" class="btn btn-secondary px-4" (click)="gotoPrevious()" [disabled]="currentIdx == 0"><< Prev</button>
+                <button type="button" class="btn btn-secondary px-4 float-right" (click)="gotoNext()" [disabled]="currentIdx == orders.length - 1">Next >></button>
+            </form>
+        </div>
+    </div>
+</div>

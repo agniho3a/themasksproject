@@ -1,0 +1,15 @@
+.all-done {
+  border: 5px solid limegreen;
+}
+
+.ready {
+  border: 5px solid deepskyblue;
+}
+
+.in-progress {
+  border: 5px solid orange;
+}
+
+.no-show {
+  border: 5px solid red;
+}

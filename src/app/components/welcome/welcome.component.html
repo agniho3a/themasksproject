@@ -1,0 +1,72 @@
+<!-- 
+<p>welcome works!</p>
+<button (click)='testClick()'>Click</button>
+<button (click)='clearAll()'>Clear</button>
+
+<ul class="search-result">
+    <li *ngFor="let rec of records" >
+        {{rec.name}}
+    </li>
+</ul>
+
+<div *ngIf="records.length != 0">
+    {{records[idx].name}}<br>
+    <button (click)="decrementIdx()" [disabled]="isAtHead">&lt;&lt;Prev</button>
+    <button (click)="incrementIdx()" [disabled]="isAtTail">Next&gt;&gt;</button>
+</div> -->
+<div class="container">
+<div class="row">
+    <div class="col-10" style="border: 1px solid red;">
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="col-2 col-h">
+                <label for="s_no">S.No.</label>
+                <span>1</span>
+            </div>
+            <div class="col-2 col-h">
+                <label for="s_no">Qty.</label>
+                <span>999</span>
+            </div>
+            <div class="col-2 col-h">
+                <label for="s_no">Amount</label>
+                <span>999</span>
+            </div> 
+            <div class="col-2 col-h">
+                <label for="s_no">Donation</label>
+                <span>999</span>
+            </div>
+            <div class="col-2 col-h">
+                <label for="s_no">Total</label>
+                <span>999</span>
+            </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="row row-d">
+            <div class="col-2">
+                <label for="s_name">Name</label>
+            </div>
+            <div class="col-10">
+                <span>some name here</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 summary">
+        <div class="row row2">
+            <div class="col-9">Order Qty</div>
+            <div class="col-3">{{ summary['orderQty'] }}</div>
+        </div>
+        <div class="row row2">
+            <div class="col-9">Fulfilled</div>
+            <div class="col-3">{{ summary['fulfilled'] }}</div>
+        </div>
+        <div class="row row2">
+            <div class="col-9">Ready</div>
+            <div class="col-3">{{ summary['ready'] }}</div>
+        </div>
+        <div class="row row2">
+            <div class="col-9">To Make</div>
+            <div class="col-3">{{ summary['stillToMake'] }}</div>
+        </div>
+    </div>
+</div>
+</div>
