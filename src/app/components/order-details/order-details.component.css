@@ -1,15 +1,48 @@
 .all-done {
-  border: 5px solid limegreen;
+  border: 3px solid limegreen;
 }
 
 .ready {
-  border: 5px solid deepskyblue;
+  border: 3px solid deepskyblue;
 }
 
 .in-progress {
-  border: 5px solid orange;
+  border: 3px solid orange;
 }
 
 .no-show {
-  border: 5px solid red;
+  border: 3px solid red;
+}
+
+.details-box {
+  background-color: #fcfcfc;
+  border: 1px solid #cfcfcf;
+  border-radius: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+input, textarea {
+  background-color: #f6f6f6 !important;
+  border: 1px solid #afafaf;
+  border-radius: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+button {
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-hide {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
 }

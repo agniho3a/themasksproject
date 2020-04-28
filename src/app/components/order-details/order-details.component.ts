@@ -18,11 +18,21 @@ export class OrderDetailsComponent implements OnInit {
   }
 
   gotoPrevious() {
-    this.currentIdx--;
+    let animation = 'headShake';
+    if (this.currentIdx > 0) {
+      this.currentIdx--;
+      animation = 'slideInLeft';
+    }
+    this.animateCSS('.details-box', animation);
   }
 
   gotoNext() {
-    this.currentIdx++;
+    let animation = 'headShake';
+    if (this.currentIdx < this.orders.length - 1) {
+      this.currentIdx++;
+      animation = 'slideInRight';
+    }
+    this.animateCSS('.details-box', animation);
   }
 
   getStatusString(): string {
@@ -39,5 +49,15 @@ export class OrderDetailsComponent implements OnInit {
     this.currentClass = 'in-progress';
     return 'IN PROGRESS';
   }
+
+  animateCSS(element, animationName) {
+    const node = document.querySelector(element);
+
+    node.classList.add('animated', 'faster', animationName);
+    node.addEventListener('animationend', () => {
+      node.classList.remove('animated', 'faster', animationName);
+    });
+  }
+
 
 }

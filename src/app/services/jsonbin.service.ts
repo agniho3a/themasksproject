@@ -18,8 +18,6 @@ export class JsonbinService {
 
   getExportedOrders(): Observable<Spreadsheet> {
     const headers = new HttpHeaders().set('secret-key', '$2b$10$wYtUScsFoIL9TLUJbYisbOVzxYtfcqPw/avdcVo5agIISO4wS6e2C');
-
     return this.http.get<Spreadsheet>('https://api.jsonbin.io/b/5ea2518d98b3d53752338d40', { headers });
-
   }
 }

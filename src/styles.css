@@ -1,9 +1,12 @@
 input[type='text']:disabled {
   pointer-events: none;
-  background-color: #ffffff;
 }
 
 textarea:disabled {
   pointer-events: none;
-  background-color: #ffffff !important;
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
 }

@@ -1,5 +1,21 @@
 .summary {
-    background-color: #efefef;
-    border: 1px solid #cecece;
-    border-radius: 12px;
+  background-color: #fcfcfc;
+  border: 1px solid #cfcfcf;
+  border-radius: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+input, textarea {
+  background-color: #f6f6f6 !important;
+  border: 1px solid #afafaf;
+  border-radius: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+button {
+  border-radius: 12px;
 }
